@@ -14,6 +14,6 @@ class ProposalViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
 
-        evaluate_proposal.delay(serializer.data['data'])
+        evaluate_proposal.delay(serializer.data['id'])
 
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
