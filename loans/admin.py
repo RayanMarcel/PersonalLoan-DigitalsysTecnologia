@@ -1,4 +1,8 @@
-from django.contrib import admin
 from .models import Proposal
+from django.contrib import admin
 
-admin.site.register(Proposal)
+class ProposalAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'full_name', 'cpf', 'loan_value', 'status', 'reviewed')
+
+admin.site.register(Proposal, ProposalAdmin)
+

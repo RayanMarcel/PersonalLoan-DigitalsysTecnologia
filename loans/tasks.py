@@ -1,8 +1,9 @@
-from celery import shared_task
 from .models import Proposal
+from celery import shared_task
 
 @shared_task
 def evaluate_proposal(proposal_id):
+    print('cahamda')
     proposal = Proposal.objects.get(id=proposal_id)
 
     total_proposals = Proposal.objects.filter(reviewed=True).count()

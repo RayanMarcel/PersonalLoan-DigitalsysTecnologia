@@ -17,6 +17,7 @@ document.getElementById('proposal-form').addEventListener('submit', function(eve
             address: address,
             loan_value: loan_value,
         }),
+        credentials: 'omit',
     })
     .then((response) => {
         if (!response.ok) {
