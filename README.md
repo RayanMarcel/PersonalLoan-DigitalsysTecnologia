@@ -31,11 +31,4 @@ wait-for-it.sh: Este script é comumente usado em aplicações Docker para esper
 
 # Como Contribuir
 
-A chamada do RabbitMQ pelo celery dentro do ambiente docker esta sendo recusada 
-"File "/usr/local/lib/python3.8/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
-web_1       |     raise ConnectionError(str(exc)) from exc
-web_1       | kombu.exceptions.OperationalError: [Errno 111] Connection refused
-web_1       | [19/Jun/2023 23:23:56] "POST /api/proposals/ HTTP/1.1" 500 232833"
-Porém em local esta chamando como esperado, o post da proposta ocorre nos dois casos, somente o Rabbit que nao é acionado no Docker.
-
 Se você gostaria de contribuir para este projeto, por favor, faça um fork do repositório, faça suas alterações e, em seguida, envie um pull request. Certifique-se de que suas alterações passem em todos os testes antes de enviar o pull request.
